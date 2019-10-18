@@ -1,4 +1,0 @@
-h1 {color: grey; front-famyli: Arial}
-h2 {color: blue; front-famyli: Arial; text-align: center}
-SS {front-famyli: Arial; text-align: center; border: 3px solid #20B2AA; padding: 10px;}
-
