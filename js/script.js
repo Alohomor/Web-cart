@@ -1,21 +1,15 @@
 var map = L.map('map').setView([-75.75, -122.23], 4);
-var geojsonMarkerOptions = {
-    radius: 8,
-    fillColor: "DarkViolet",
-    color: "#000",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 0.8
-};
-var smallIcon = new L.Icon({
-    iconSize: [27, 27],
-    iconAnchor: [13, 27],
-    popupAnchor: [1, -24],
-    iconUrl: 'rocket.png'
+var icon = L.icon({
+    iconUrl: 'rocket.png',
+    iconSize: [27, 31],
+    iconAnchor: [13.5, 17.5],
+    popupAnchor: [0, -11],
 });
 L.geoJSON(ino, {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, smallIcon);
+        return L.marker(latlng,  {
+            icon: icon
+        });
     }
 }).addTo(map);
 
