@@ -9,7 +9,7 @@ L.geoJSON(ino, {
     pointToLayer: function (feature, latlng) {
         return L.marker(latlng,  {
             icon: icon
-        });
+        }).bindPopup("Я инопланетный Василий!");
     }
 }).addTo(map);
 
