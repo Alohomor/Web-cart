@@ -1,6 +1,6 @@
 var map = L.map('map').setView([-75.75, -122.23], 4);
 var icon = L.icon({
-    iconUrl: 'rocket.png',
+    iconUrl: 'reddit-alien-brands.svg',
     iconSize: [27, 31],
     iconAnchor: [13.5, 17.5],
     popupAnchor: [0, -11],
