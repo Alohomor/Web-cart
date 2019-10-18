@@ -11,22 +11,24 @@ h2 {
     text-align: center;
 }
 
-#SS {
+/* Блок больше информации*/
+.more-info {
     text-align: center;
     border: 3px solid #20B2AA;
     padding: 10px;
 }
 
-body {
+/* Стили стр с картой */
+.map-body {
     padding: 0;
     margin: 0;
 }
 
-html, body, #map {
+html.map-body, body.map-body, #map {
     height: 100%;
     width: 100%;
 }
-
+/* Блок с картой */
 #map {
     position: absolute;
     top: 0;
