@@ -13,8 +13,8 @@ L.geoJSON(ino, {
     }
 }).addTo(map);
 
-
-var layer = L.tileLayer('https://api.mapbox.com/styles/v1/alohomor/ck24fssed2nqu1cmymww7nokb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYWxvaG9tb3IiLCJhIjoiY2syNGZqNzV4MDEwcjNua3gzemNwMDVnMyJ9.mKrMrrsj2eF33EA5-8hR8A').addTo(map);
+const apiLink = 'https://api.mapbox.com/styles/v1/alohomor/ck24fssed2nqu1cmymww7nokb/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYWxvaG9tb3IiLCJhIjoiY2syNGZqNzV4MDEwcjNua3gzemNwMDVnMyJ9.mKrMrrsj2eF33EA5-8hR8A';
+var layer = L.tileLayer(apiLink).addTo(map);
 var layerLabels;
 
 function setBasemap(basemap) {
@@ -22,7 +22,11 @@ function setBasemap(basemap) {
         map.removeLayer(layer);
     }
 
-    layer = L.esri.basemapLayer(basemap);
+    if(basemap === 'DashaMap') {
+        layer = L.tileLayer(apiLink);
+    } else {
+        layer = L.esri.basemapLayer(basemap);
+    }
 
     map.addLayer(layer);
 

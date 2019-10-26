@@ -1,5 +1,5 @@
 * {
-    font-family:  Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -28,6 +28,7 @@ html.map-body, body.map-body, #map {
     height: 100%;
     width: 100%;
 }
+
 /* Блок с картой */
 #map {
     position: absolute;
@@ -48,4 +49,10 @@ html.map-body, body.map-body, #map {
 
 #basemaps {
     margin-bottom: 5px;
+}
+
+#backToMainPage {
+    width: 170px;
+    height: auto;
+    border-bottom: 1px solid rgb(220, 53, 69)
 }
